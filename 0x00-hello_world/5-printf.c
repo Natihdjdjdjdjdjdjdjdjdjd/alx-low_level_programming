@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 /**
  * main - A c proogram that print that print a line function
  * Return: 0 (success)
