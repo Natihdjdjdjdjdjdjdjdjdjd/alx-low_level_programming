@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - a program that finds and prints the sum of the even-valued terms
+ * its leesthan 4000000.
  * Return: always 0
  */
 int main(void)
