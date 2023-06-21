@@ -31,7 +31,9 @@ void print_times_table(int n)
 					_putchar((p / 10) % 10 + 48);
 				}
 				else if (p <= 99 && p >= 10)
+				{
 					_putchar((p / 10) + 48);
+				}
 				_putchar((p % 10) + 48);
 			}
 			_putchar('\n');
