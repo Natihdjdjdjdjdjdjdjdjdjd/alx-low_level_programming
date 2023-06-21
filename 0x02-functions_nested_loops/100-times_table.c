@@ -13,7 +13,7 @@ void print_times_table(int n)
 	{
 		for (num = 0; num <= n; ++num)
 		{
-			_putchar('0');
+			_putchar(48);
 			for (m = 1; m <= n; ++m)
 			{
 				_putchar('.');
@@ -21,18 +21,18 @@ void print_times_table(int n)
 
 				p = num * m;
 				if (p <= 9)
-					_putchar(32);
+					_putchar(' ');
 				if (p <= 99)
-					putchar(32);
+					putchar(' ');
 
 				if (p >= 100)
 				{
-					_putchar((p / 100) + '0');
-					_putchar((p / 10) % 10 + '0');
+					_putchar((p / 100) + 48);
+					_putchar((p / 10) % 10 + 48);
 				}
 				else if (p <= 99 && p >= 10)
-					_putchar((p / 10) + '0');
-				_putchar((p / 10) + '0');
+					_putchar((p / 10) + 48);
+				_putchar((p % 10) + 48);
 			}
 			_putchar('\n');
 		}
