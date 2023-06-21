@@ -6,9 +6,9 @@
  * @n: print yhe value if time table
  * start with  0
  */
-void print_times_table(int n);
+void print_times_table(int n)
 {
-	int num, m, P;
+	int num, m, p;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -17,25 +17,25 @@ void print_times_table(int n);
 			_putchar('0');
 			for (m = 1; m <= n; m++)
 			{
-				_Putchar(44);
-				_Putchar(32);
-				P = num * m;
-				if (P <= 99)
+				_putchar(44);
+				_putchar(32);
+				p = num * m;
+				if (p <= 99)
 					_putchar(32);
-				if (P <= 9)
-					Putchar(32);
-				if (P >= 100)
+				if (p <= 9)
+					putchar(32);
+				if (p >= 100)
 				{
-					_Putchar((p / 100) + '0');
-					_Putchar(((p / 10)) % 10 + '0');
+					_putchar((p / 100) + '0');
+					_putchar(((p / 10)) % 10 + '0');
 				}
-				else if (P <= 99 && P >= 10)
+				else if (p <= 99 && p >= 10)
 				{
-					_Putchar((P / 10) + '0');
+					_putchar((p / 10) + '0');
 				}
-				_Putchar((P / 10) + '0');
+				_putchar((p / 10) + '0');
 			}
-			_Putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
