@@ -6,17 +6,23 @@
  */
 int main(void)
 {
-	int x = 0;
-	long y = 1, z = 2, sum = z;
+	unsigned long x = 0, y = 1, sum;
+	float total_sum;
 
-	while (z + y < 4000000)
+	while (1)
 	{
-		z += y;
-		if (z % 2 == 0)
-			sum += z;
-			y = z - y;
-			++x;
-		}
-		printf("%ld\n", sum);
-		return (0);
+		sum = x + y;
+
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
+			total_sum += sum;
+
+		x = y;
+		y = sum;
+	}
+	printf("%.0f\n", total_sum);
+
+	return (0);
 }
