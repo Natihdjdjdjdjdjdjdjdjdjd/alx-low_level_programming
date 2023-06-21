@@ -18,7 +18,7 @@ int main(void)
 		else
 		{
 		z += y;
-		y = z - j;
+		y = z - y;
 	       printf(", %ld", z);
 		}
 		++x;
