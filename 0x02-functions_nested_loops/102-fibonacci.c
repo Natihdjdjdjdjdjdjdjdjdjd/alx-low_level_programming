@@ -14,12 +14,12 @@ int main(void)
 		if (x == 0)
 			printf("%ld", y);
 		else if (x == 1)
-			printf("%ld ,", k);
+			printf(", %ld", z);
 		else
 		{
 		z += y;
 		y = z - j;
-	       printf("%ld ,", z);
+	       printf(", %ld", z);
 		}
 		++x;
 	}
