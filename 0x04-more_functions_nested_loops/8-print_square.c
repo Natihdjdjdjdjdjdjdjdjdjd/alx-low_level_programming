@@ -3,6 +3,7 @@
 
 /**
  * print_square - a function that prints a square
+ * @size: check number of squere
  * Return: always 0;
  */
 void print_square(int size)
