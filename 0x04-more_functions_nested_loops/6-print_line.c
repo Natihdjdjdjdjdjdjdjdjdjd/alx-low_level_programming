@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * print_line - draws a straight line
  * @n: this my no tome\
