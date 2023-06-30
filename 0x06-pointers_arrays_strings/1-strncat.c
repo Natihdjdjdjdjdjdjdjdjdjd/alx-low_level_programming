@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *_strncat - function that concatenates two strings.
- * @dest: first string
- * @src: second stirng
- * @n: third integer
- * Return: 0
+ * *_strncat - a function that concatenates two strings
+ * @dest: my first integer
+ * @src: my second string
+ * @n: my third string
+ * Return: void
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -20,10 +20,10 @@ char *_strncat(char *dest, char *src, int n)
 	y = 0;
 	while (y < n && src[y] != '\0')
 	{
-		dest[x] = src[y];
+		dest[x] = src[x];
 		x++;
 		y++;
 	}
-	dest[x] = '\n';
+	dest[x] = '\0';
 	return (dest);
 }
