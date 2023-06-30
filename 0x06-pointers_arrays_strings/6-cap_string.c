@@ -2,34 +2,34 @@
 #include <stdio.h>
 /**
  * *cap_string - function that capitalizes all words of a string.
- * @n: the capitalized string
- * Return: to string n.
+ * @str: the capitalized string
+ * Return: to string
  */
-char *cap_string(char *n)
+char *cap_string(char *str)
 {
-	int x = 0;
+	int index = 0;
 
-	while (n[x])
+	while (str[index])
 	{
-		while (!(n[x] >= 'a' && n[x] <= 'z'))
-			x++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+		     str[index] -= 32;
 
-		if (n[x - 1] == ' ' ||
-		n[x - 1] == '\t' ||
-		n[x - 1] == '\n' ||
-		n[x - 1] == ',' ||
-		n[x - 1] == ';' ||
-		n[x - 1] == '.' ||
-		n[x - 1] == '!' ||
-		n[x - 1] == '?' ||
-		n[x - 1] == '"' ||
-		n[x - 1] == '(' ||
-		n[x - 1] == ')' ||
-		n[x - 1] == '{' ||
-		n[x - 1] == '}' ||
-		x == 0)
-			n[x] -= 32;
-		x++;
+		index++;
 	}
-	return (n);
+	return (str);
 }
