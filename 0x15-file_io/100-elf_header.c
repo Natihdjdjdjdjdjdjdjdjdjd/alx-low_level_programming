@@ -84,7 +84,7 @@ void print_class(unsigned char *e_ident)
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
-}
+
 }
 /**
  * print_data - function prints data of an ELF header.
@@ -270,7 +270,7 @@ void close_elf(int elf)
  * Description: If the file is not an ELF File or
  *              the function fails - exit code 98.
  */
-}
+
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *h;
