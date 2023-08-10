@@ -85,7 +85,7 @@ void print_class(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
-
+}
 /**
  * print_data - function prints data of an ELF header.
  * @e_ident: array of pointer containing the ELF class.
@@ -198,7 +198,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	printf("  Type:                              ");
 
 	switch (e_type)
-	{
+
 	case ET_NONE:
 		printf("NONE (None)\n");
 		break;
@@ -214,6 +214,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	case ET_CORE:
 		printf("CORE (Core file)\n");
 		break;
+		}
 	default:
 		printf("<unknown: %x>\n", e_type);
 	}
@@ -269,27 +270,28 @@ void close_elf(int elf)
  * Description: If the file is not an ELF File or
  *              the function fails - exit code 98.
  */
+}
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *h;
-	int x, r;
+	int x, y;
 
 	x = open(argv[1], O_RDONLY);
 	if (x == -1)
-	{
+
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
-	}
+
 	h = malloc(sizeof(Elf64_Ehdr));
 	if (h == NULL)
-	{
+
 		close_elf(x);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
-	}
-	r = read(x, h, sizeof(Elf64_Ehdr));
-	if (r == -1)
-	{
+
+	y = read(x, h, sizeof(Elf64_Ehdr));
+	if (y == -1)
+
 		free(h);
 		close_elf(x);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
